@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
+import 'package:flutter_sample/RandomWords.dart';
 
 void main() => runApp(RandomWord());
 
 class RandomWord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
     return MaterialApp(
       title: "Welcome to Flutter",
       home: Scaffold(
@@ -14,7 +13,7 @@ class RandomWord extends StatelessWidget {
           title: const Text("Welcome to Flutter"),
         ),
         body: Center(
-          child: Text(wordPair.asPascalCase),
+          child: RandomWords(),
         ),
       ),
     );
